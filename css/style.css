@@ -199,9 +199,13 @@ body {
     margin-bottom: 5px;
 }
 
+.pr-list {
+    margin: 0;
+}
+
 .pr-list li {
     border: 1px solid #000000;
-    padding: 10px;
+    padding-left: 10px;
     margin-bottom: 10px;
 }
 
@@ -211,6 +215,7 @@ body {
 
 .work-item {
     display: inline-block;
+    box-sizing: border-box;
     width: 100%;
     border: 1px solid #CCCCCC;
     margin-top: 20px;
@@ -407,6 +412,37 @@ body {
         -moz-column-gap: 1.5em; 
         -webkit-column-gap: 1.5em; 
     }
+    
+    .contacts::before {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-bottom: 100px solid #cccccc;
+        border-right: 350px solid transparent;
+        top: -100px;
+    }
+
+    .contacts::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-bottom: 100px solid #cccccc;
+        border-left: 350px solid transparent;
+        top: -100px;
+        right: 0;
+    }
+    
+    .contact {
+        width: 300px;
+        height: 50px;
+        margin: 10px auto;
+        text-align: center;
+        border-top: 1px solid #000000;
+        border-bottom: 1px solid #000000;
+        position: relative;
+    }
 }
 
 @media (min-width: 576px) and (max-width: 767px) { /* sm */
@@ -454,8 +490,8 @@ body {
         width: 100%;
         font-family: 'Alegreya', 'Times New Roman', serif;
         font-size: 17px;
-        padding-left: 10px;
         padding-right: 10px;
+        margin: 0;
     }   
     
     .work-row {
@@ -465,6 +501,27 @@ body {
         column-gap: 1.5em; 
         -moz-column-gap: 1.5em; 
         -webkit-column-gap: 1.5em; 
+    }
+    
+    .contacts::before {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-bottom: 100px solid #cccccc;
+        border-right: 540px solid transparent;
+        top: -100px;
+    }
+
+    .contacts::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-bottom: 100px solid #cccccc;
+        border-left: 540px solid transparent;
+        top: -100px;
+        right: 0;
     }
 }
 
